@@ -11,16 +11,14 @@ public class NameUtility {
      * @return string of initials representing the first letter of each word separated by a period.
      */
     public static String convertNameToInitials(String name){
-        String initials = "";
+        StringBuilder initials = new StringBuilder();
         if(name != null) {
             name = name.replaceAll("\\s+"," ").trim();
             if (!name.isEmpty()) {
                 String[] names = name.split("\\s");
-                for (int i = 0; i < names.length; i++){
-                    initials = initials + names[i].charAt(0) + ".";
-                }
+                for (String namePart : names) initials.append(namePart.charAt(0)).append(".");
             }
         }
-        return initials;
+        return initials.toString();
     }
 }
