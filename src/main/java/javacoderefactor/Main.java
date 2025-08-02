@@ -1,6 +1,6 @@
 package javacoderefactor;
 
-//Assignment 3 is here.
+//This is the working portion for assignment 3.
 
 import static javacoderefactor.NameUtility.convertNameToInitials;
 
